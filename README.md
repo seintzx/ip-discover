@@ -16,13 +16,14 @@ whatever
 For now you can only set one IP/domain at the time
 
 ```
-usage: discover.py [-h] IP
+usage: discover.py [-h] [-m] IP
 
 IP/Domain information discovery tool
 
 positional arguments:
-  IP          IP address to lookup
+  IP              IP address to lookup
 
 optional arguments:
-  -h, --help  show this help message and exit
+  -h, --help      show this help message and exit
+  -m, --machinae  Also use machinae
 ```
