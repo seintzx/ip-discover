@@ -17,4 +17,4 @@ def my_whois(ip):
         line = line.strip()
         if len(line) != 0:
             if "%" not in str(line):
-                print(line.decode("utf-8"))
+                print("\t".expandtabs(4) + line.decode("utf-8"))

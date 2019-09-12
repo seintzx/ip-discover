@@ -80,6 +80,6 @@ def my_dig(ip):
         try:
             myAnswers = myResolver.query(ip, a)
             for rdata in myAnswers:
-                print(a + ': ' + rdata.to_text())
+                print("\t".expandtabs(4) + a + ': ' + rdata.to_text())
         except Exception as e:
             pass
