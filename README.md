@@ -13,7 +13,7 @@ For now you can only set one IP/domain at the time
 ```
 usage: discover.py [-h] IP
 
-IP information discovery tool
+IP/Domain information discovery tool
 
 positional arguments:
   IP          IP address to lookup
