@@ -6,6 +6,11 @@ Tool for IP/Domain Information discovery
 
 `pip install -r requirements.txt`
 
+You will also need [machinae](https://github.com/HurricaneLabs/machinae)
+installed and in the path so add `export
+PATH="${HOME}/.local/bin/machinae:${PATH}"` to your `bashrc` or `zshrc` or
+whatever
+
 # Usage
 
 For now you can only set one IP/domain at the time
