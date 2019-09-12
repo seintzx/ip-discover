@@ -8,7 +8,7 @@ from my_machinae import my_machinae
 
 def init_args():
     parser = argparse.ArgumentParser(
-        description="IP information discovery tool")
+        description="IP/Domain information discovery tool")
     parser.add_argument("IP", help="IP address to lookup")
     args = parser.parse_args()
     return (args.IP)
