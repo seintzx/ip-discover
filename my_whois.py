@@ -15,6 +15,7 @@ def my_whois(ip):
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
     for line in cmd.stdout:
         line = line.strip()
-        if len(line) != 0:
-            if "%" not in str(line):
-                print("\t".expandtabs(4) + line.decode("utf-8"))
+        if len(line) != 0 and \
+           chr(line[0]) != "%" and \
+           chr(line[0]) != "#":
+            print("\t".expandtabs(4) + line.decode("utf-8"))
