@@ -7,9 +7,11 @@ Tool for IP/Domain Information discovery
 `pip install -r requirements.txt`
 
 You will also need [machinae](https://github.com/HurricaneLabs/machinae)
-installed and in the path so add `export
-PATH="${HOME}/.local/bin/machinae:${PATH}"` to your `bashrc` or `zshrc` or
-whatever
+installed and in the path so add
+```
+export PATH="${HOME}/.local/bin/machinae:${PATH}"
+```
+to your `bashrc` or `zshrc` or whatever
 
 ## Configuration file
 
@@ -21,19 +23,14 @@ API = [virus total api key]
 
 # Usage
 
-
-
-For now you can only set one IP/domain at the time
-
 ```
-usage: discover.py [-h] [-m] IP
+usage: discover.py [-h] (-a HASH | -i IP) [-m]
 
 IP/Domain information discovery tool
 
-positional arguments:
-  IP              IP address to lookup
-
 optional arguments:
-  -h, --help      show this help message and exit
-  -m, --machinae  Also use machinae
+  -h, --help            show this help message and exit
+  -a HASH, --hash HASH  search hash on virustotal
+  -i IP, --ip IP        IP address or domain to lookup
+  -m, --machinae        also use machinae
 ```
