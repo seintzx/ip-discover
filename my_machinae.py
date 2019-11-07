@@ -5,6 +5,7 @@ def my_machinae(ip):
     import subprocess
     mycmd = str("machinae " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
+    print("- machinae ============================")
     for line in cmd.stdout:
         line = line.strip()
         if len(line) != 0:

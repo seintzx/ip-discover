@@ -13,9 +13,12 @@ def my_whois(ip):
     import subprocess
     mycmd = str("whois " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
+    print("\n- **whois**")
+    print("\t```".expandtabs(4))
     for line in cmd.stdout:
         line = line.strip()
         if len(line) != 0 and \
            chr(line[0]) != "%" and \
            chr(line[0]) != "#":
             print("\t".expandtabs(4) + line.decode("utf-8"))
+    print("\t```".expandtabs(4))

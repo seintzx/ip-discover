@@ -76,6 +76,8 @@ def my_dig(ip):
 
     myResolver = dns.resolver.Resolver()
     myResolver.nameservers = ['8.8.8.8', '8.8.4.4']
+    print("- **dig**")
+    print("\t```".expandtabs(4))
     for a in ids:
         try:
             myAnswers = myResolver.query(ip, a)
@@ -83,3 +85,4 @@ def my_dig(ip):
                 print("\t".expandtabs(4) + a + ': ' + rdata.to_text())
         except Exception as e:
             pass
+    print("\t```".expandtabs(4))
