@@ -26,7 +26,7 @@ API = [virus total api key]
 ```
 usage: discover.py [-h] (-a HASH | -i IP) [-m]
 
-IP/Domain information discovery tool
+IP/Domain information discovery tool and Hash search on virus total
 
 optional arguments:
   -h, --help            show this help message and exit

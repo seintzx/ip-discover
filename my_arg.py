@@ -4,7 +4,8 @@
 def my_arg():
     import argparse
     parser = argparse.ArgumentParser(
-        description="IP/Domain information discovery tool")
+        description=
+        "IP/Domain information discovery tool and Hash search on virus total")
 
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-a",
