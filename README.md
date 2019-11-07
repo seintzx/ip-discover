@@ -11,7 +11,17 @@ installed and in the path so add `export
 PATH="${HOME}/.local/bin/machinae:${PATH}"` to your `bashrc` or `zshrc` or
 whatever
 
+## Configuration file
+
+Edit the `config.txt` with your API key
+```
+[configuration]
+API = [virus total api key]
+```
+
 # Usage
+
+
 
 For now you can only set one IP/domain at the time
 
