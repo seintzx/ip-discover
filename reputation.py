@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 
+import subprocess
 
-def my_machinae(ip):
-    import subprocess
+
+def get_reputation(ip):
     mycmd = str("machinae " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
     print("- machinae ============================")

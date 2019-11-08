@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import subprocess
 
 def my_whois_native(ip):
     # import whois
@@ -9,8 +10,7 @@ def my_whois_native(ip):
     return (0)
 
 
-def my_whois(ip):
-    import subprocess
+def get_info(ip):
     mycmd = str("whois " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
     print("\n- **whois**")
