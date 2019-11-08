@@ -15,7 +15,7 @@ to your `bashrc` or `zshrc` or whatever
 
 ## Configuration file
 
-Edit the `config.txt` with your API key
+Create the `config.txt` file or edit the existent one
 ```
 [configuration]
 API = [virus total api key]
