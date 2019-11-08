@@ -26,11 +26,11 @@ API = [virus total api key]
 ```
 usage: discover.py [-h] (-a HASH | -i IP) [-m]
 
-IP/Domain information discovery tool and Hash search on virus total
+IP/Domain discovery tool and Hash search on VirusTotal
 
 optional arguments:
   -h, --help            show this help message and exit
   -a HASH, --hash HASH  search hash on virustotal
-  -i IP, --ip IP        IP address or domain to lookup
+  -i IP, --ip IP        IP or domain to lookup
   -m, --machinae        also use machinae
 ```
