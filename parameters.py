@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
+import argparse
 
-def my_arg():
-    import argparse
+
+def param():
     parser = argparse.ArgumentParser(
-        description=
-        "IP/Domain information discovery tool and Hash search on virus total")
+        description="IP/Domain discovery tool and Hash search on VirusTotal")
 
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-a",
@@ -15,7 +15,7 @@ def my_arg():
     group.add_argument("-i",
                        "--ip",
                        action="store",
-                       help="IP address or domain to lookup")
+                       help="IP or domain to lookup")
     parser.add_argument("-m",
                         "--machinae",
                         action="store_true",
