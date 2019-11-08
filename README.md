@@ -20,6 +20,7 @@ Edit the `config.txt` with your API key
 [configuration]
 API = [virus total api key]
 ```
+Without square brackets
 
 # Usage
 
