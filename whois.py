@@ -2,6 +2,7 @@
 
 import subprocess
 
+
 def my_whois_native(ip):
     # import whois
     # w = whois.whois(ip)
@@ -13,12 +14,14 @@ def my_whois_native(ip):
 def get_info(ip):
     mycmd = str("whois " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
-    print("\n- **whois**")
-    print("\t```".expandtabs(4))
+    res = ""
+    res += "\n- **whois**\n"
+    res += "\t```\n".expandtabs(4)
     for line in cmd.stdout:
         line = line.strip()
         if len(line) != 0 and \
            chr(line[0]) != "%" and \
            chr(line[0]) != "#":
-            print("\t".expandtabs(4) + line.decode("utf-8"))
-    print("\t```".expandtabs(4))
+            res += "\t".expandtabs(4) + line.decode("utf-8") + "\n"
+    res += "\t```\n".expandtabs(4)
+    return (res)

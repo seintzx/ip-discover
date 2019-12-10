@@ -77,13 +77,15 @@ def dig(ip):
 
     myResolver = dns.resolver.Resolver()
     myResolver.nameservers = ['8.8.8.8', '8.8.4.4']
-    print("- **dig**")
-    print("\t```".expandtabs(4))
+    res = ""
+    res += "- **dig**\n"
+    res += "\t```\n".expandtabs(4)
     for a in ids:
         try:
             myAnswers = myResolver.query(ip, a)
             for rdata in myAnswers:
-                print("\t".expandtabs(4) + a + ': ' + rdata.to_text())
+                res += "\t".expandtabs(4) + a + ': ' + rdata.to_text() + "\n"
         except Exception as e:
             pass
-    print("\t```".expandtabs(4))
+    res += "\t```\n".expandtabs(4)
+    return (res)

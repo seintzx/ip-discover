@@ -6,7 +6,8 @@ import subprocess
 def get_reputation(ip):
     mycmd = str("machinae " + str(ip))
     cmd = subprocess.Popen(mycmd, shell=True, stdout=subprocess.PIPE)
-    print("- machinae ============================")
+    res += ""
+    res += "- machinae ============================\n"
     for line in cmd.stdout:
         line = line.strip()
         if len(line) != 0:
@@ -14,4 +15,5 @@ def get_reputation(ip):
                "Error" not in str(line) and \
                "--list-sites" not in str(line) and \
                chr(line[0]) != '*':
-                print(line.decode("utf-8"))
+                res += line.decode("utf-8") + "\n"
+    return (res)
